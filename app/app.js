@@ -31,14 +31,14 @@ myApp.controller('myAppController', function($scope,$http){
             $http.get('/items/' + item._id).then(function (res) {
               $scope.item = res.data;
             });
-          };  
+        };  
           
-          $scope.update = function() {
+        $scope.update = function() {
             console.log($scope.item._id);
             $http.put('/items/' + $scope.item._id, $scope.item).then(function(res) {
                 console.log(res);
                 $scope.getItem();
             })
-          };
+        };
        
  })

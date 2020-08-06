@@ -4,43 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="app.js"></script>
      <title>Sell</title>
 </head>
 <body>
     <header >
-      <div id="menu-bar">
+      <div id="head">
         <h1>Sell Bar</h1>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">List</a></li>
-        </ul>
     </div>
-    </header> 
-    <main ng-view>
-    <div class="content">
-      <div ng-controller="myAppController">
-        <button ng-click="order = 'name'">Order by Name</button>
-        <button ng-click="order = 'price'">Order by Price</button>
-        <input type="text" ng-model="search" placeholder="search" />
-          <ul>
-            <div ng-repeat="item in items  | orderBy:order | filter:search ">
-               <h3> {{item.name}} - {{item.price | currency }}</h3>
-               <div class="remove" ng-click="removeItem(item)"> X </div>
-               <div class="edit" ng-click="editItem(item)"> + </div>
-            <span class="color" ng-style="{color:item.color}">{{item.color}}</span>
+  </header> 
+  <main ng-view>
+  <div class="content">
+    <div ng-controller="myAppController">
+      <button ng-click="order = 'name'">Order by Name</button>
+      <button ng-click="order = 'price'">Order by Price</button>
+      <input type="text" ng-model="search" placeholder="search" />
+        <ul>
+          <div ng-repeat="item in items  | orderBy:order | filter:search ">
+             <h3> {{item.name}} - {{item.price | currency }}</h3>
+             <div class="remove" ng-click="removeItem(item)"> X </div>
+             <div class="edit" ng-click="editItem(item)"> + </div>
+          <span class="color" ng-style="{color:item.color}">{{item.color}}</span>
+          </div>
+          </ul>
+        <form ng-submit="addItem()">
+          <input type="text" placeholder="name" ng-model="item.name"/>
+          <input type="text" placeholder="color" ng-model="item.color"/>
+          <input type="text" placeholder="price" ng-model="item.price"/>
+          <input type="submit" value="Add Item"/>
+        </form>
+        <button class="btn btn-info" ng-click="update()">Update</button>
+      </div>
+    </main>
+      <footer>
+        <div class="footer-container">
+          <div class="left-col">
+            <div class="social-media">
+              <a href="mailto:begumbolat@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              <a href="https://github.com/begumbolatt"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/beg%C3%BCm-bolat-301218172/"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            </ul>
-          <form ng-submit="addItem()">
-            <input type="text" placeholder="name" ng-model="item.name"/>
-            <input type="text" placeholder="color" ng-model="item.color"/>
-            <input type="text" placeholder="price" ng-model="item.price"/>
-            <input type="submit" value="Add Item"/>
-          </form>
-          <button class="btn btn-info" ng-click="update()">Update</button>
+            <p class="rights-text">© 2020</p>
+          </div>
+          <div class="right-col">
+            <h1>Contact Us</h1>
+            <div class="border">
+            </div>
+             <p>• 1-512-394-9987</p>
+             <p>• sellbar@sell.com</p>
+          </div>
         </div>
-      </main>
+      </footer>
    </div>
 </body>
 </html>

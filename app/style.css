@@ -1,6 +1,7 @@
 body{
-    font-family: Helvetica;
+    font-family: "Open Sans",sans-serif;
     margin: 0;
+    padding: 0;
   }
   
   h1,h2,h3{
@@ -16,31 +17,31 @@ body{
     text-transform: uppercase;
   }
 
-  #menu-bar{
-    background: crimson;
+  #head{
+    background: #fc5c65;
     color: #fff;
     padding: 10px;
   }
   
-  #menu-bar h1{
+  #head h1{
     font-size: 24px;
     font-weight: normal;
     display: inline-block;
   }
   
-  #menu-bar ul{
+  #head ul{
     float: right;
     list-style-type: none;
     padding: 0;
     margin: 6px 0;
   }
   
-  #menu-bar li{
+  #head li{
     float: right;
     margin-left: 20px;
   }
   
-  #menu-bar a{
+  #head a{
     color: #fff
   }
   
@@ -50,21 +51,25 @@ body{
     margin: 30px auto;
     border-radius: 10px;
   }
-  
+ 
   .content{
     padding: 20px;
   }
   
   .content button,
   .content input[type="submit"]{
-    background: #fff;
+    background: #2e2e2e;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
-    color: #777;
+    color: #f1f1f1;
     border: 0;
     box-shadow: 2px 2px 2px rgba(20,20,20,0.1);
     font-size: 16px;
+  }
+
+  .content button:hover{
+    opacity: .9;
   }
   
   .content button:nth-child(2){
@@ -129,3 +134,51 @@ body{
     cursor: pointer;
     margin-left: 10px;
   }  
+  footer {
+    background: #f1f1f1;
+    padding: 90px 0;
+  }
+  .footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  .social-media {
+    margin: 20px 0;
+  }
+  .social-media a{
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+  }
+  .social-media a:hover {
+    color: #fc5c65;
+  }
+
+  .right-col h1{
+    font-size: 26px;
+  }
+  .border {
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+  }
+  .submit{
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16 px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+  }
+  
