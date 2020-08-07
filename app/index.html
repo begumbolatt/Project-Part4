@@ -26,9 +26,9 @@
              <h3> {{item.name}} - {{item.price | currency }}</h3>
              <div class="remove" ng-click="removeItem(item)"> X </div>
              <div class="edit" ng-click="editItem(item)"> + </div>
-          <span class="color" ng-style="{color:item.color}">{{item.color}}</span>
+             <span class="color" ng-style="{color:item.color}">{{item.color}}</span>
           </div>
-          </ul>
+        </ul>
         <form ng-submit="addItem()">
           <input type="text" placeholder="name" ng-model="item.name"/>
           <input type="text" placeholder="color" ng-model="item.color"/>
@@ -36,16 +36,16 @@
           <input type="submit" value="Add Item"/>
         </form>
         <button class="btn btn-info" ng-click="update()">Update</button>
-      </div>
+    </div>
     </main>
       <footer>
         <div class="footer-container">
           <div class="left-col">
             <div class="social-media">
-              <a href="mailto:begumbolat@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-              <a href="https://github.com/begumbolatt"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/beg%C3%BCm-bolat-301218172/"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="mailto:begumbolat@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              <a href="https://github.com/begumbolatt" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/beg%C3%BCm-bolat-301218172/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/iamabegum"  target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <p class="rights-text">© 2020</p>
           </div>
